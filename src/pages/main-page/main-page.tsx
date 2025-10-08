@@ -1,12 +1,16 @@
 import PlaceCard from '../../components/place-card/place-card.tsx';
+import { Helmet } from 'react-helmet-async';
 
 type MainPageProps = {
     placesCount: number;
 }
 
-function MainPage({placesCount}: MainPageProps): JSX.Element {
+export default function MainPage({placesCount}: MainPageProps): JSX.Element {
   return (
     <div className="page page--gray page--main">
+      <Helmet>
+        <title>6 cities</title>
+      </Helmet>
       <header className="header">
         <div className="container">
           <div className="header__wrapper">
@@ -155,5 +159,3 @@ function MainPage({placesCount}: MainPageProps): JSX.Element {
     </div>
   );
 }
-
-export default MainPage;
