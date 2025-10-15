@@ -7,19 +7,21 @@ import LoginPage from '../../pages/login-page/login-page.tsx';
 import MainPage from '../../pages/main-page/main-page.tsx';
 import OfferPage from '../../pages//offer-page/offer-page.tsx';
 import NotFoundPage from '../../pages/not-found-page/not-found-page';
+import { Offer } from '../../types/offer.interface.js';
 
 type AppProps = {
     placesCount: number;
+    offers: Offer[];
 }
 
-export default function App({placesCount}: AppProps): JSX.Element {
+export default function App({placesCount, offers}: AppProps): JSX.Element {
   return (
     <HelmetProvider>
       <BrowserRouter>
         <Routes>
           <Route
             path={AppRoute.Root}
-            element={<MainPage placesCount={placesCount}/>}
+            element={<MainPage placesCount={placesCount} offers={offers}/>}
           />
           <Route
             path={AppRoute.Login}
@@ -29,14 +31,14 @@ export default function App({placesCount}: AppProps): JSX.Element {
             path={AppRoute.Favorites}
             element={
               <PrivateRoute
-                authorizationStatus={AuthStatus.NoAuth}
+                authorizationStatus={AuthStatus.Auth}
               >
-                <FavoritesPage />
+                <FavoritesPage offers={offers}/>
               </PrivateRoute>
             }
           />
           <Route
-            path={AppRoute.Offer}
+            path={`${AppRoute.Offer}/:id`}
             element={<OfferPage />}
           />
           <Route
