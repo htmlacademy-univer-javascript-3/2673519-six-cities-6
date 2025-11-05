@@ -1,5 +1,5 @@
-import { Offer } from '../../types/offer.interface.js';
-import PlaceCard from '../place-card/place-card.js';
+import { Offer } from '@types';
+import PlaceCard from '@components/place-card/place-card.js';
 import { useState } from 'react';
 
 type OffersListProps = {

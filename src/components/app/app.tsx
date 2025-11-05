@@ -1,13 +1,13 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import { AppRoute, AuthStatus } from '../../consts';
-import PrivateRoute from '../private-route/private-route';
-import FavoritesPage from '../../pages/favorites-page/favorites-page.tsx';
-import LoginPage from '../../pages/login-page/login-page.tsx';
-import MainPage from '../../pages/main-page/main-page.tsx';
-import OfferPage from '../../pages//offer-page/offer-page.tsx';
-import NotFoundPage from '../../pages/not-found-page/not-found-page';
-import { Offer } from '../../types/offer.interface.js';
+import { AppRoute, AuthStatus } from '@consts';
+import PrivateRoute from '@components/private-route/private-route';
+import FavoritesPage from '@pages/favorites-page/favorites-page.tsx';
+import LoginPage from '@pages/login-page/login-page.tsx';
+import MainPage from '@pages/main-page/main-page.tsx';
+import OfferPage from '@pages//offer-page/offer-page.tsx';
+import NotFoundPage from '@pages/not-found-page/not-found-page';
+import { Offer } from '@types';
 
 type AppProps = {
     placesCount: number;

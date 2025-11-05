@@ -1,4 +1,4 @@
-import { Review } from '../types/review.interface.js';
+import { Review } from '@types';
 
 export const reviews: Review[] = [
   {

@@ -1,6 +1,6 @@
-import { Offer } from '../../types/offer.interface.js';
+import { Offer } from '@types';
 import { Link } from 'react-router-dom';
-import { AppRoute } from '../../consts.tsx';
+import { AppRoute } from '@consts';
 
 type PlaceCardProps = {
   offer: Offer;

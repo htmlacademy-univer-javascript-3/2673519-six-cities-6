@@ -1,4 +1,4 @@
-import { Offer } from '../types/offer.interface.js';
+import { Offer } from '@types';
 
 export const offers: Offer[] = [
   {

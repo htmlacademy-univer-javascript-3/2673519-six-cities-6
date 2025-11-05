@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
-import { Offer } from '../../types/offer.interface.js';
-import OffersList from '../../components/offers-list/offers-list.tsx';
+import { Offer } from '@types';
+import OffersList from '@components/offers-list/offers-list.tsx';
 
 type MainPageProps = {
     placesCount: number;
