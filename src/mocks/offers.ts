@@ -19,6 +19,28 @@ export const offers: Offer[] = [
     rating: 90,
     preview: 'img/amsterdam@2x.jpg',
     description: 'Good neighbors here!',
+    bedrooms: 4,
+    maxAdults: 5,
+    goods: [
+      'Baby seat',
+      'Air conditioning',
+      'Kitchen',
+      'Breakfast',
+      'Fridge',
+      'Coffee machine',
+      'Cable TV',
+    ],
+    author: {
+      name: 'Angelina',
+      avatarUrl: 'https://14.design.htmlacademy.pro/static/host/avatar-angelina.jpg',
+      isPro: true,
+      email: 'angelina2001@gmail.com',
+      token:''
+    },
+    images: [
+      'https://14.design.htmlacademy.pro/static/hotel/20.jpg',
+      'https://14.design.htmlacademy.pro/static/hotel/9.jpg'
+    ]
   },
   {
     id: '17ea709a-ec05-4ac8-9dfe-026360c021db',
@@ -38,6 +60,25 @@ export const offers: Offer[] = [
     rating: 60,
     preview: 'img/apartment-02.jpg',
     description: 'Stylish industrial loft in city center, panoramic views, fully equipped.',
+    bedrooms: 6,
+    maxAdults: 666,
+    goods: [
+      'Baby seat',
+      'Heating',
+      'Washing machine',
+      'Laptop friendly workspace'
+    ],
+    author: {
+      name: 'Angelina',
+      avatarUrl: 'https://14.design.htmlacademy.pro/static/host/avatar-angelina.jpg',
+      isPro: true,
+      email: 'angelina2001@gmail.com',
+      token:''
+    },
+    images: [
+      'https://14.design.htmlacademy.pro/static/hotel/13.jpg',
+      'https://14.design.htmlacademy.pro/static/hotel/6.jpg'
+    ]
   },
   {
     id: '7901d551-154e-411b-ab82-068b27e4c11a',
@@ -57,6 +98,27 @@ export const offers: Offer[] = [
     rating: 80,
     preview: 'img/room-small.jpg',
     description: 'Bright ground-floor unit, private patio, quiet neighborhood, near metro.',
+    bedrooms: 5,
+    maxAdults: 5,
+    goods: [
+      'Washer',
+      'Air conditioning',
+      'Kitchen',
+      'Breakfast',
+      'Fridge',
+      'Dishwasher',
+    ],
+    author: {
+      name: 'Angelina',
+      avatarUrl: 'https://14.design.htmlacademy.pro/static/host/avatar-angelina.jpg',
+      isPro: true,
+      email: 'angelina2001@gmail.com',
+      token:''
+    },
+    images: [
+      'https://14.design.htmlacademy.pro/static/hotel/11.jpg',
+      'https://14.design.htmlacademy.pro/static/hotel/4.jpg'
+    ]
   },
   {
     id: 'c6f97764-f401-491d-acf7-19b8b60b0b77',
@@ -76,5 +138,26 @@ export const offers: Offer[] = [
     rating: 90,
     preview: 'img/apartment-01.jpg',
     description: 'Clean Scandinavian design, smart home features, peaceful and functional.',
+    bedrooms: 5,
+    maxAdults: 14,
+    goods: [
+      'Kitchen',
+      'Breakfast',
+      'Fridge',
+      'Coffee machine',
+      'Cable TV',
+      'Heating',
+    ],
+    author: {
+      name: 'Angelina',
+      avatarUrl: 'https://14.design.htmlacademy.pro/static/host/avatar-angelina.jpg',
+      isPro: true,
+      email: 'angelina2001@gmail.com',
+      token:''
+    },
+    images: [
+      'https://14.design.htmlacademy.pro/static/hotel/14.jpg',
+      'https://14.design.htmlacademy.pro/static/hotel/2.jpg'
+    ]
   },
 ];

@@ -3,6 +3,7 @@ import { Offer } from '@types';
 import OffersList from '@components/offers-list/offers-list.tsx';
 import Map from '@components/map/map';
 import { useState } from 'react';
+import { MapClassName } from '@consts';
 
 type MainPageProps = {
     placesCount: number;
@@ -113,6 +114,7 @@ export default function MainPage({placesCount, offers}: MainPageProps): JSX.Elem
                 city={offers[0].city}
                 offers={offers}
                 selectedOffer={selectedOffer}
+                className={MapClassName.Main}
               />
             </div>
           </div>

@@ -10,6 +10,7 @@ type MapProps = {
     city: City;
     offers: Offer[];
     selectedOffer: Offer | undefined;
+    className: string;
   };
 
 const defaultCustomIcon = new Icon({
@@ -25,7 +26,7 @@ const currentCustomIcon = new Icon({
 });
 
 export default function Map(props: MapProps): JSX.Element {
-  const {city, offers, selectedOffer} = props;
+  const {city, offers, selectedOffer, className} = props;
 
   const mapRef = useRef(null);
   const map = useMap(mapRef, city);
@@ -34,18 +35,20 @@ export default function Map(props: MapProps): JSX.Element {
     if (map) {
       const markerLayer = layerGroup().addTo(map);
       offers.forEach((offer) => {
-        const marker = new Marker({
-          lat: offer.city.location.latitude,
-          lng: offer.city.location.longitude
-        });
+        if (offer && offer.city.location) {
+          const marker = new Marker({
+            lat: offer.city.location.latitude,
+            lng: offer.city.location.longitude
+          });
 
-        marker
-          .setIcon(
-            selectedOffer !== undefined && offer.id === selectedOffer.id
-              ? currentCustomIcon
-              : defaultCustomIcon
-          )
-          .addTo(markerLayer);
+          marker
+            .setIcon(
+              selectedOffer !== undefined && offer.id === selectedOffer.id
+                ? currentCustomIcon
+                : defaultCustomIcon
+            )
+            .addTo(markerLayer);
+        }
       });
 
       return () => {
@@ -55,8 +58,8 @@ export default function Map(props: MapProps): JSX.Element {
   }, [map, offers, selectedOffer]);
 
   return (
-    <div
-      className="cities__map map"
+    <section
+      className={className}
       style={{ height: '500px' }}
       ref={mapRef}
     />

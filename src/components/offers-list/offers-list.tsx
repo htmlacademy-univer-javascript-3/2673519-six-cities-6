@@ -1,6 +1,7 @@
 import { Offer } from '@types';
 import PlaceCard from '@components/place-card/place-card.js';
 import { useState, useEffect } from 'react';
+import { CardType } from '@consts';
 
 type OffersListProps = {
     offers: Offer[];
@@ -30,6 +31,7 @@ export default function OffersList({offers, onActiveOfferChange}: OffersListProp
           offer={offer}
           onCursorEnter={() => handleCursorEnter(offer.id)}
           onCursorLeave={handleCursorLeave}
+          cardType={CardType.Regular}
         />))}
     </div>
   );

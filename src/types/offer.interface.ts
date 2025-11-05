@@ -1,4 +1,5 @@
 import { City } from './city.type.js';
+import { User } from './user.interface.js';
 
 export interface Offer {
     id: string;
@@ -11,4 +12,9 @@ export interface Offer {
     rating: number;
     preview: string;
     description: string;
+    bedrooms: number;
+    maxAdults: number;
+    goods: string[];
+    author: User;
+    images: string[];
 }
