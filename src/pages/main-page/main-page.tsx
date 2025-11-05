@@ -1,11 +1,13 @@
-import PlaceCard from '../../components/place-card/place-card.tsx';
 import { Helmet } from 'react-helmet-async';
+import { Offer } from '@types';
+import OffersList from '@components/offers-list/offers-list.tsx';
 
 type MainPageProps = {
     placesCount: number;
+    offers: Offer[];
 }
 
-export default function MainPage({placesCount}: MainPageProps): JSX.Element {
+export default function MainPage({placesCount, offers}: MainPageProps): JSX.Element {
   return (
     <div className="page page--gray page--main">
       <Helmet>
@@ -98,57 +100,7 @@ export default function MainPage({placesCount}: MainPageProps): JSX.Element {
                   <li className="places__option" tabIndex={0}>Top rated first</li>
                 </ul>
               </form>
-              <div className="cities__places-list places__list tabs__content">
-                <PlaceCard
-                  image="img/apartment-01.jpg"
-                  isPremium
-                  price={120}
-                  title='Beautiful &amp; luxurious apartment at great location'
-                  type='Apartment'
-                  isBookmark={false}
-                  stars={4}
-                />
-
-                <PlaceCard
-                  image="img/room.jpg"
-                  isPremium={false}
-                  price={80}
-                  title='Wood and stone place'
-                  type='Room'
-                  isBookmark
-                  stars={4}
-                />
-
-                <PlaceCard
-                  image="img/apartment-02.jpg"
-                  isPremium={false}
-                  price={132}
-                  title='Canal View Prinsengracht'
-                  type='Apartment'
-                  isBookmark={false}
-                  stars={4}
-                />
-
-                <PlaceCard
-                  image="img/apartment-03.jpg"
-                  isPremium
-                  price={180}
-                  title='Nice, cozy, warm big bed apartment'
-                  type='Apartment'
-                  isBookmark={false}
-                  stars={5}
-                />
-
-                <PlaceCard
-                  image="img/room.jpg"
-                  isPremium={false}
-                  price={80}
-                  title='Wood and stone place'
-                  type='Room'
-                  isBookmark
-                  stars={4}
-                />
-              </div>
+              <OffersList offers={offers}/>
             </section>
             <div className="cities__right-section">
               <section className="cities__map map"></section>
